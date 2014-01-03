@@ -3,7 +3,7 @@ package lexer;
 import java.io.*;
 
 public class CalculatorLexer{
-	public static int line = 1;
+	public int line = 1; //Perchè static?
 	private char peek = ' ';
 
 	private void readch(){
@@ -15,7 +15,8 @@ public class CalculatorLexer{
 	}
 
 	public Token scan(){
-		while (peek == ' ' || peek == '\t' || peek == '\n' ){
+		while (peek == ' ' || peek == '\t'){
+		//while (peek == ' ' || peek == '\t' || peek == '\n'){//La consegna dice che i ritorni a capo vanno ignorati, nel debug viene utilizzata la linea di sopra in modo che i ritorni a capo vengano trattati come token EOF. Per seguire la consegna, questa rica deve essere decommentata al posto di quella sopra.
 			if (peek == '\n') line++;
 			readch();
 		}
@@ -36,6 +37,18 @@ public class CalculatorLexer{
 		case '-':
 			peek = ' ';
 			return new Token(Tag.MINUS, "-");
+			
+		case '*':
+			peek = ' ';
+			return new Token(Tag.TIMES, "*");
+			
+		case '/':
+			peek = ' ';
+			return new Token(Tag.DIVISON, "/");
+			
+		case '\n':
+			peek = ' ';
+			return new Token(Tag.EOF, "CR-LF");
 
 		default:
 			if (Character.isDigit(peek)) {
@@ -47,11 +60,14 @@ public class CalculatorLexer{
 				return new Token(Tag.NUM, s);
 
 			}
-			else{
-				throw new IllegalArgumentException("Trovato carattere illecito");
-			}
+			else error(peek);
+			return null;
 		}
 
+	}
+	
+	private void error(char s){
+		throw new Error("Trovato carattere illecito: " + s);
 	}
 
 	/*
