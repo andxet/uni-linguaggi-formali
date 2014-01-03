@@ -60,6 +60,14 @@ public class CalculatorLexer{
 				return new Token(Tag.NUM, s);
 
 			}
+			else if(Character.isLetter(peek)){
+				StringBuffer b = new StringBuffer();
+				do{
+					b.append(peek); 
+					readch();
+				} while (Character.isLetterOrDigit(peek));
+				return new Token(Tag.ID, b.toString());
+			}
 			else error(peek);
 			return null;
 		}

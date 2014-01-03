@@ -2,7 +2,7 @@ package lexer;
 
 public class Tag {
 	private final int tag;
-	private final String tagName[] = {"LPAR", "RPAR", "PLUS", "MINUS", "NUM", "EOF", "TIMES", "DIVISION"};
+	private final String tagName[] = {"LPAR", "RPAR", "PLUS", "MINUS", "NUM", "EOF", "TIMES", "DIVISION", "ID"};
 	
 	private Tag(int tag) {
 		this.tag = tag;
@@ -21,10 +21,11 @@ public class Tag {
 	public static Tag EOF = new Tag(5);
 	public static Tag TIMES = new Tag(6);
 	public static Tag DIVISON = new Tag(7);
+	public static Tag ID = new Tag(8);
 
-	public boolean equals(Tag i){
+	/*public boolean equals(Tag i){
 		return i.tag == tag;
-	}
+	}*/
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)

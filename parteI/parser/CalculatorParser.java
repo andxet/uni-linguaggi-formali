@@ -83,12 +83,10 @@ public class CalculatorParser {
 			match(Tag.NUM);
 			return;
 		}
-		/*
 		if(look.tag == Tag.ID){
 			match(Tag.ID);
 			return;
 		}
-		*/
 		//Tutti non terminali... se non c'è un match, si è verificato un errore
 		error("syntax error");
 	}
