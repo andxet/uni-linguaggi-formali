@@ -16,7 +16,7 @@ public class CalculatorLexer{
 
 	public Token scan(){
 		while (peek == ' ' || peek == '\t'){
-		//while (peek == ' ' || peek == '\t' || peek == '\n'){//La consegna dice che i ritorni a capo vanno ignorati, nel debug viene utilizzata la linea di sopra in modo che i ritorni a capo vengano trattati come token EOF. Per seguire la consegna, questa rica deve essere decommentata al posto di quella sopra.
+		//while (peek == ' ' || peek == '\t' || peek == '\n'){//La consegna dice che i ritorni a capo vanno ignorati, nel debug viene utilizzata la linea di sopra in modo che i ritorni a capo vengano trattati come token EOF. Per seguire la consegna, questa riga deve essere decommentata al posto di quella sopra.
 			if (peek == '\n') line++;
 			readch();
 		}
@@ -60,14 +60,15 @@ public class CalculatorLexer{
 				return new Token(Tag.NUM, s);
 
 			}
-			else if(Character.isLetter(peek)){
+			//Deccommentare il seguente per rendere riconoscibili gli ID
+			/*else if(Character.isLetter(peek)){
 				StringBuffer b = new StringBuffer();
 				do{
 					b.append(peek); 
 					readch();
 				} while (Character.isLetterOrDigit(peek));
 				return new Token(Tag.ID, b.toString());
-			}
+			}*/
 			else error(peek);
 			return null;
 		}

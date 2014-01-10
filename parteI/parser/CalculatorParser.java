@@ -27,68 +27,89 @@ public class CalculatorParser {
 		} else error("syntax error");
 	}
 	
-	public void start(){
-		expr();
+	public int start(){
+		int expr_val;
+		expr_val = expr();
 		match(Tag.EOF);
+		
+		return expr_val;
 	}
 	
-	private void expr(){
-		term();
-		exprp();
+	private int expr(){
+		int term_val, exprp_val;
+		
+		term_val = term();
+		exprp_val = exprp(term_val);
+		
+		return exprp_val;
 	}
 	
-	private void exprp(){
+	private int exprp(int exprp_i){
+		int term_val, exprp_val;
+		
 		if (look.tag == Tag.PLUS){
 			match(Tag.PLUS);
-			term();
-			exprp();
-			return;
+			term_val = term();
+			exprp_val = exprp(exprp_i + term_val);
+			return exprp_val;
 		}
 		if (look.tag == Tag.MINUS){
 			match(Tag.MINUS);
-			term();
-			exprp();
-			return;
+			term_val = term();
+			exprp_val = exprp(exprp_i - term_val);
+			return exprp_val;
 		}
+		return exprp_i;
 	}
 	
-	private void term(){
-		fact();
-		termp();
+	private int term(){
+		int fact_val, termp_val;
+		
+		fact_val = fact();
+		termp_val = termp(fact_val);
+		
+		return termp_val;
 	}
 	
-	private void termp(){
+	private int termp(int termp_i){
+		int fact_val, termp_val;
+		
 		if(look.tag == Tag.TIMES){
 			match(Tag.TIMES);
-			fact();
-			termp();
-			return;
+			fact_val = fact();
+			termp_val = termp(termp_i * fact_val);
+			return termp_val;
 		}
 		if(look.tag == Tag.DIVISON){
 			match(Tag.DIVISON);
-			fact();
-			termp();
-			return;
+			fact_val = fact();
+			termp_val = termp(termp_i / fact_val);
+			return termp_val;
 		}
+		return termp_i;//epsilon
 	}
 	
-	private void fact(){
+	private int fact(){
 		if(look.tag == Tag.LPAR){
+			int expr_val;
+			
 			match(Tag.LPAR);
-			expr();
+			expr_val = expr();
 			match(Tag.RPAR);
-			return;
+			return expr_val;
 		}
 		if(look.tag == Tag.NUM){
+			int fact_val = Integer.parseInt(look.lessema);
 			match(Tag.NUM);
-			return;
+			return fact_val;
 		}
-		if(look.tag == Tag.ID){
+		/*if(look.tag == Tag.ID){
 			match(Tag.ID);
 			return;
-		}
+		}*/
 		//Tutti non terminali... se non c'è un match, si è verificato un errore
 		error("syntax error");
+		return 0;
 	}
 
 }
