@@ -1,0 +1,8 @@
+Assumi che le variabili oo, p, q siano intere.
+Assumi che la variabile primo sia booleana.
+Metti i valori di 1237, 2, vero in oo, p, primo.
+Finché "p è minore di oo/2 e primo" è vera, per favore, fai:
+    Metti i valori di oo - (oo / p) * p, p + 1 in q, p.
+    Metti il valore di q è diverso da 0 in primo.
+Grazie.
+Stampa, per favore, il valore di primo.

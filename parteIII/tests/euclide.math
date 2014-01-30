@@ -1,0 +1,11 @@
+{int, int, int} => {z, w, temp}
+{12, 8} => {z, w}
+
+?{not (z = w)} => *{
+	?{z < w} => {
+		{z, w} => {temp, z}
+		{temp} => {w}
+	}
+	{z - w} => {z}
+}
+{z} => {print}

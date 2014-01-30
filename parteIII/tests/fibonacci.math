@@ -1,0 +1,13 @@
+{int, int, int, int, int} => { i, k, m, n, res}
+
+{10} => {k}
+?{k=0} => {
+    {0} => {res}
+}:{
+    {1, 0, 1} => {i, m, n}
+    ?{i <= k-1} => *{
+        {n, n+m, i+1} => {m, n, i}
+    }
+    {n} => {res}
+}
+{res} => {print}
