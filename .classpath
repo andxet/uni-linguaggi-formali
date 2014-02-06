@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="parteI"/>
-	<classpathentry kind="src" path="parteII"/>
-	<classpathentry kind="src" path="parteIII"/>
+	<classpathentry excluding="Grammatica1/output/|Grammatica 2/output/|Grammatica 2/output/|Grammatica1/output/" kind="src" path="parteII"/>
+	<classpathentry excluding="math/output/" kind="src" path="parteIII"/>
+	<classpathentry kind="src" path="parteII/Grammatica 2/output"/>
+	<classpathentry kind="src" path="parteII/Grammatica1/output"/>
+	<classpathentry kind="src" path="parteIII/math/output"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="parteIII/antlr-3.5.1-complete-no-st3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

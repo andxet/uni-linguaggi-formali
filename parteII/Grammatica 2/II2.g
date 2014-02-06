@@ -6,6 +6,26 @@ grammar II2;
 	//Grammatica 2 es II
 	}
 
+
+
+start
+	:	expr
+	;
+	
+expr
+	:	term (PLUS term | MINUS term)*
+	;	
+	
+term
+	:	fact (TIMES fact | DIVISION fact)*
+	;
+
+fact
+	:	LPAR expr RPAR
+	|	ID
+	|	NUM
+	;
+	
 PLUS
 	:	'+';
 	
@@ -32,23 +52,3 @@ ID
 	
 WS
 	:	( ' ' | '\t' | '\n' | '\r' ) { $channel = HIDDEN; };
-
-
-
-start
-	:	expr
-	;
-	
-expr
-	:	term (PLUS term | MINUS term)*
-	;	
-	
-term
-	:	fact (TIMES fact | DIVISION fact)*
-	;
-
-fact
-	:	LPAR expr RPAR
-	|	ID
-	|	NUM
-	;

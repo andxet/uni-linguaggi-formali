@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g 2014-01-28 12:39:43
+// $ANTLR 3.5 /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g 2014-01-30 12:55:35
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -31,15 +31,15 @@ public class II2parte3Lexer extends Lexer {
 	public II2parte3Lexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "/Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g"; }
+	@Override public String getGrammarFileName() { return "/Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g"; }
 
 	// $ANTLR start "PLUS"
 	public final void mPLUS() throws RecognitionException {
 		try {
 			int _type = PLUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:10:2: ( '+' )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:10:4: '+'
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:46:2: ( '+' )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:46:4: '+'
 			{
 			match('+'); 
 			}
@@ -58,8 +58,8 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = MINUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:13:2: ( '-' )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:13:4: '-'
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:49:2: ( '-' )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:49:4: '-'
 			{
 			match('-'); 
 			}
@@ -78,8 +78,8 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = TIMES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:16:2: ( '*' )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:16:4: '*'
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:52:2: ( '*' )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:52:4: '*'
 			{
 			match('*'); 
 			}
@@ -98,8 +98,8 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = DIVISION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:19:2: ( '/' )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:19:4: '/'
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:55:2: ( '/' )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:55:4: '/'
 			{
 			match('/'); 
 			}
@@ -118,8 +118,8 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = LPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:22:2: ( '(' )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:22:4: '('
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:58:2: ( '(' )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:58:4: '('
 			{
 			match('('); 
 			}
@@ -138,8 +138,8 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = RPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:25:2: ( ')' )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:25:4: ')'
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:61:2: ( ')' )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:61:4: ')'
 			{
 			match(')'); 
 			}
@@ -158,10 +158,10 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = NUM;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:28:2: ( ( '0' .. '9' )+ )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:28:4: ( '0' .. '9' )+
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:64:2: ( ( '0' .. '9' )+ )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:64:4: ( '0' .. '9' )+
 			{
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:28:4: ( '0' .. '9' )+
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:64:4: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -173,7 +173,7 @@ public class II2parte3Lexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -210,10 +210,10 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:31:2: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:31:4: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:67:2: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:67:4: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			{
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:31:4: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:67:4: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -225,7 +225,7 @@ public class II2parte3Lexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:
 					{
 					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -262,8 +262,8 @@ public class II2parte3Lexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:34:2: ( ( ' ' | '\\t' | '\\n' | '\\r' ) )
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:34:4: ( ' ' | '\\t' | '\\n' | '\\r' )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:70:2: ( ( ' ' | '\\t' | '\\n' | '\\r' ) )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:70:4: ( ' ' | '\\t' | '\\n' | '\\r' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -287,7 +287,7 @@ public class II2parte3Lexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:8: ( PLUS | MINUS | TIMES | DIVISION | LPAR | RPAR | NUM | ID | WS )
+		// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:8: ( PLUS | MINUS | TIMES | DIVISION | LPAR | RPAR | NUM | ID | WS )
 		int alt3=9;
 		switch ( input.LA(1) ) {
 		case '+':
@@ -405,63 +405,63 @@ public class II2parte3Lexer extends Lexer {
 		}
 		switch (alt3) {
 			case 1 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:10: PLUS
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:10: PLUS
 				{
 				mPLUS(); 
 
 				}
 				break;
 			case 2 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:15: MINUS
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:15: MINUS
 				{
 				mMINUS(); 
 
 				}
 				break;
 			case 3 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:21: TIMES
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:21: TIMES
 				{
 				mTIMES(); 
 
 				}
 				break;
 			case 4 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:27: DIVISION
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:27: DIVISION
 				{
 				mDIVISION(); 
 
 				}
 				break;
 			case 5 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:36: LPAR
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:36: LPAR
 				{
 				mLPAR(); 
 
 				}
 				break;
 			case 6 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:41: RPAR
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:41: RPAR
 				{
 				mRPAR(); 
 
 				}
 				break;
 			case 7 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:46: NUM
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:46: NUM
 				{
 				mNUM(); 
 
 				}
 				break;
 			case 8 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:50: ID
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:50: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 9 :
-				// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:1:53: WS
+				// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:1:53: WS
 				{
 				mWS(); 
 

@@ -5,34 +5,6 @@ grammar II1parte3;
 	//Lab LFT
 	//Grammatica 1 es II
 	}
-
-PLUS
-	:	'+';
-	
-MINUS
-	:	'-';
-	
-TIMES	
-	:	'*';
-	
-DIVISION
-	:	'/';
-	
-LPAR
-	:	'(';
-	
-RPAR
-	:	')';
-	
-NUM
-	:	('0'..'9')+;
-	
-ID
-	:	('a'..'z'|'A'..'Z')+;
-	
-WS
-	:	( ' ' | '\t' | '\n' | '\r' ) { $channel = HIDDEN; };
-
 	
 start	
 	:	rexpr=expr EOF
@@ -74,3 +46,30 @@ fact returns [int val]
 	|	NUM
 		{ val=Integer.parseInt($NUM.text); }
 	;
+	
+PLUS
+	:	'+';
+	
+MINUS
+	:	'-';
+	
+TIMES	
+	:	'*';
+	
+DIVISION
+	:	'/';
+	
+LPAR
+	:	'(';
+	
+RPAR
+	:	')';
+	
+NUM
+	:	('0'..'9')+;
+	
+ID
+	:	('a'..'z'|'A'..'Z')+;
+	
+WS
+	:	( ' ' | '\t' | '\n' | '\r' ) { $channel = HIDDEN; };

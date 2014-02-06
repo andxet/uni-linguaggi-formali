@@ -1,12 +1,12 @@
 import org.antlr.runtime.*;
 
-public class TestparteI {
+public class TestparteII2 {
 
     public static void main(String[] args) throws Exception {
         ANTLRInputStream input = new ANTLRInputStream(System.in);
-        parteII2Lexer lexer = new parteII2Lexer(input);
+        II2Lexer lexer = new II2Lexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        parteII2Parser parser = new parteII2Parser(tokens);
+        II2Parser parser = new II2Parser(tokens);
         parser.start();
     }
 	

@@ -6,33 +6,6 @@ grammar II2parte3;
 	//Grammatica 2 es II
 	}
 
-PLUS
-	:	'+';
-	
-MINUS
-	:	'-';
-	
-TIMES	
-	:	'*';
-	
-DIVISION
-	:	'/';
-	
-LPAR
-	:	'(';
-	
-RPAR
-	:	')';
-	
-NUM
-	:	('0'..'9')+;
-	
-ID
-	:	('a'..'z'|'A'..'Z')+;
-	
-WS
-	:	( ' ' | '\t' | '\n' | '\r' ) { $channel = HIDDEN; };
-
 
 
 start returns [int val]
@@ -68,3 +41,30 @@ fact returns [int val]
 	|	ID
 		{ $val = 0; }
 	;
+	
+PLUS
+	:	'+';
+	
+MINUS
+	:	'-';
+	
+TIMES	
+	:	'*';
+	
+DIVISION
+	:	'/';
+	
+LPAR
+	:	'(';
+	
+RPAR
+	:	')';
+	
+NUM
+	:	('0'..'9')+;
+	
+ID
+	:	('a'..'z'|'A'..'Z')+;
+	
+WS
+	:	( ' ' | '\t' | '\n' | '\r' ) { $channel = HIDDEN; };

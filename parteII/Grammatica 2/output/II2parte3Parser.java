@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g 2014-01-28 12:39:43
+// $ANTLR 3.5 /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g 2014-01-30 12:55:35
 
 	//Andrea Peretti, mat. 718024
 	//Lab LFT
@@ -38,7 +38,7 @@ public class II2parte3Parser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "expr", "start", "term", "fact"
+		"invalidRule", "term", "expr", "start", "fact"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -78,12 +78,12 @@ public class II2parte3Parser extends DebugParser {
 	}
 
 	@Override public String[] getTokenNames() { return II2parte3Parser.tokenNames; }
-	@Override public String getGrammarFileName() { return "/Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g"; }
+	@Override public String getGrammarFileName() { return "/Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g"; }
 
 
 
 	// $ANTLR start "start"
-	// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:38:1: start returns [int val] : rexpr= expr EOF ;
+	// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:11:1: start returns [int val] : rexpr= expr EOF ;
 	public final int start() throws RecognitionException {
 		int val = 0;
 
@@ -93,20 +93,20 @@ public class II2parte3Parser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "start");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(38, 0);
+		dbg.location(11, 0);
 
 		try {
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:39:2: (rexpr= expr EOF )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:12:2: (rexpr= expr EOF )
 			dbg.enterAlt(1);
 
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:39:4: rexpr= expr EOF
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:12:4: rexpr= expr EOF
 			{
-			dbg.location(39,9);
-			pushFollow(FOLLOW_expr_in_start147);
+			dbg.location(12,9);
+			pushFollow(FOLLOW_expr_in_start25);
 			rexpr=expr();
 			state._fsp--;
-			dbg.location(39,15);
-			match(input,EOF,FOLLOW_EOF_in_start149); dbg.location(40,3);
+			dbg.location(12,15);
+			match(input,EOF,FOLLOW_EOF_in_start27); dbg.location(13,3);
 			 System.out.println(rexpr);
 			}
 
@@ -118,7 +118,7 @@ public class II2parte3Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(41, 1);
+		dbg.location(14, 1);
 
 		}
 		finally {
@@ -134,7 +134,7 @@ public class II2parte3Parser extends DebugParser {
 
 
 	// $ANTLR start "expr"
-	// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:43:1: expr returns [int val] : rterm= term ( PLUS rterm2= term | MINUS rterm2= term )* ;
+	// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:16:1: expr returns [int val] : rterm= term ( PLUS rterm2= term | MINUS rterm2= term )* ;
 	public final int expr() throws RecognitionException {
 		int val = 0;
 
@@ -145,21 +145,21 @@ public class II2parte3Parser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "expr");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(43, 0);
+		dbg.location(16, 0);
 
 		try {
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:44:2: (rterm= term ( PLUS rterm2= term | MINUS rterm2= term )* )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:17:2: (rterm= term ( PLUS rterm2= term | MINUS rterm2= term )* )
 			dbg.enterAlt(1);
 
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:44:4: rterm= term ( PLUS rterm2= term | MINUS rterm2= term )*
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:17:4: rterm= term ( PLUS rterm2= term | MINUS rterm2= term )*
 			{
-			dbg.location(44,9);
-			pushFollow(FOLLOW_term_in_expr171);
+			dbg.location(17,9);
+			pushFollow(FOLLOW_term_in_expr49);
 			rterm=term();
 			state._fsp--;
-			dbg.location(44,15);
-			val =rterm;dbg.location(44,28);
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:44:28: ( PLUS rterm2= term | MINUS rterm2= term )*
+			dbg.location(17,15);
+			val =rterm;dbg.location(17,28);
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:17:28: ( PLUS rterm2= term | MINUS rterm2= term )*
 			try { dbg.enterSubRule(1);
 
 			loop1:
@@ -181,28 +181,28 @@ public class II2parte3Parser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:45:4: PLUS rterm2= term
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:18:4: PLUS rterm2= term
 					{
-					dbg.location(45,4);
-					match(input,PLUS,FOLLOW_PLUS_in_expr179); dbg.location(45,15);
-					pushFollow(FOLLOW_term_in_expr183);
+					dbg.location(18,4);
+					match(input,PLUS,FOLLOW_PLUS_in_expr57); dbg.location(18,15);
+					pushFollow(FOLLOW_term_in_expr61);
 					rterm2=term();
 					state._fsp--;
-					dbg.location(46,4);
+					dbg.location(19,4);
 					 val =val + rterm2; 
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:48:4: MINUS rterm2= term
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:21:4: MINUS rterm2= term
 					{
-					dbg.location(48,4);
-					match(input,MINUS,FOLLOW_MINUS_in_expr198); dbg.location(48,16);
-					pushFollow(FOLLOW_term_in_expr202);
+					dbg.location(21,4);
+					match(input,MINUS,FOLLOW_MINUS_in_expr76); dbg.location(21,16);
+					pushFollow(FOLLOW_term_in_expr80);
 					rterm2=term();
 					state._fsp--;
-					dbg.location(49,4);
+					dbg.location(22,4);
 					 val =val - rterm2; 
 					}
 					break;
@@ -223,7 +223,7 @@ public class II2parte3Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(51, 1);
+		dbg.location(24, 1);
 
 		}
 		finally {
@@ -239,7 +239,7 @@ public class II2parte3Parser extends DebugParser {
 
 
 	// $ANTLR start "term"
-	// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:53:1: term returns [int val] : rfact= fact ( TIMES rterm= fact | DIVISION rterm= fact )* ;
+	// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:26:1: term returns [int val] : rfact= fact ( TIMES rterm= fact | DIVISION rterm= fact )* ;
 	public final int term() throws RecognitionException {
 		int val = 0;
 
@@ -250,21 +250,21 @@ public class II2parte3Parser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "term");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(53, 0);
+		dbg.location(26, 0);
 
 		try {
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:54:2: (rfact= fact ( TIMES rterm= fact | DIVISION rterm= fact )* )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:27:2: (rfact= fact ( TIMES rterm= fact | DIVISION rterm= fact )* )
 			dbg.enterAlt(1);
 
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:54:4: rfact= fact ( TIMES rterm= fact | DIVISION rterm= fact )*
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:27:4: rfact= fact ( TIMES rterm= fact | DIVISION rterm= fact )*
 			{
-			dbg.location(54,9);
-			pushFollow(FOLLOW_fact_in_term232);
+			dbg.location(27,9);
+			pushFollow(FOLLOW_fact_in_term110);
 			rfact=fact();
 			state._fsp--;
-			dbg.location(54,15);
-			val =rfact;dbg.location(54,29);
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:54:29: ( TIMES rterm= fact | DIVISION rterm= fact )*
+			dbg.location(27,15);
+			val =rfact;dbg.location(27,29);
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:27:29: ( TIMES rterm= fact | DIVISION rterm= fact )*
 			try { dbg.enterSubRule(2);
 
 			loop2:
@@ -286,28 +286,28 @@ public class II2parte3Parser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:55:4: TIMES rterm= fact
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:28:4: TIMES rterm= fact
 					{
-					dbg.location(55,4);
-					match(input,TIMES,FOLLOW_TIMES_in_term241); dbg.location(55,15);
-					pushFollow(FOLLOW_fact_in_term245);
+					dbg.location(28,4);
+					match(input,TIMES,FOLLOW_TIMES_in_term119); dbg.location(28,15);
+					pushFollow(FOLLOW_fact_in_term123);
 					rterm=fact();
 					state._fsp--;
-					dbg.location(56,4);
+					dbg.location(29,4);
 					 val =val*rterm; 
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:58:4: DIVISION rterm= fact
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:31:4: DIVISION rterm= fact
 					{
-					dbg.location(58,4);
-					match(input,DIVISION,FOLLOW_DIVISION_in_term260); dbg.location(58,18);
-					pushFollow(FOLLOW_fact_in_term264);
+					dbg.location(31,4);
+					match(input,DIVISION,FOLLOW_DIVISION_in_term138); dbg.location(31,18);
+					pushFollow(FOLLOW_fact_in_term142);
 					rterm=fact();
 					state._fsp--;
-					dbg.location(59,4);
+					dbg.location(32,4);
 					 val =val/rterm; 
 					}
 					break;
@@ -328,7 +328,7 @@ public class II2parte3Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(61, 1);
+		dbg.location(34, 1);
 
 		}
 		finally {
@@ -344,7 +344,7 @@ public class II2parte3Parser extends DebugParser {
 
 
 	// $ANTLR start "fact"
-	// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:63:1: fact returns [int val] : ( LPAR rexpr= expr RPAR | NUM | ID );
+	// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:36:1: fact returns [int val] : ( LPAR rexpr= expr RPAR | NUM | ID );
 	public final int fact() throws RecognitionException {
 		int val = 0;
 
@@ -355,10 +355,10 @@ public class II2parte3Parser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "fact");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(63, 0);
+		dbg.location(36, 0);
 
 		try {
-			// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:64:2: ( LPAR rexpr= expr RPAR | NUM | ID )
+			// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:37:2: ( LPAR rexpr= expr RPAR | NUM | ID )
 			int alt3=3;
 			try { dbg.enterDecision(3, decisionCanBacktrack[3]);
 
@@ -390,35 +390,35 @@ public class II2parte3Parser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:64:4: LPAR rexpr= expr RPAR
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:37:4: LPAR rexpr= expr RPAR
 					{
-					dbg.location(64,4);
-					match(input,LPAR,FOLLOW_LPAR_in_fact290); dbg.location(64,14);
-					pushFollow(FOLLOW_expr_in_fact294);
+					dbg.location(37,4);
+					match(input,LPAR,FOLLOW_LPAR_in_fact168); dbg.location(37,14);
+					pushFollow(FOLLOW_expr_in_fact172);
 					rexpr=expr();
 					state._fsp--;
-					dbg.location(64,20);
-					match(input,RPAR,FOLLOW_RPAR_in_fact296); dbg.location(65,3);
+					dbg.location(37,20);
+					match(input,RPAR,FOLLOW_RPAR_in_fact174); dbg.location(38,3);
 					 val =rexpr; 
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:66:4: NUM
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:39:4: NUM
 					{
-					dbg.location(66,4);
-					NUM1=(Token)match(input,NUM,FOLLOW_NUM_in_fact305); dbg.location(67,3);
+					dbg.location(39,4);
+					NUM1=(Token)match(input,NUM,FOLLOW_NUM_in_fact183); dbg.location(40,3);
 					 val = Integer.parseInt((NUM1!=null?NUM1.getText():null)); 
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// /Users/andrea/Documents/workspace/lft project1/parteII/Grammatica 2/II2parte3.g:68:4: ID
+					// /Users/andrea/Workspaces/lft project/parteII/Grammatica 2/II2parte3.g:41:4: ID
 					{
-					dbg.location(68,4);
-					match(input,ID,FOLLOW_ID_in_fact314); dbg.location(69,3);
+					dbg.location(41,4);
+					match(input,ID,FOLLOW_ID_in_fact192); dbg.location(42,3);
 					 val = 0; 
 					}
 					break;
@@ -432,7 +432,7 @@ public class II2parte3Parser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(70, 1);
+		dbg.location(43, 1);
 
 		}
 		finally {
@@ -449,21 +449,21 @@ public class II2parte3Parser extends DebugParser {
 
 
 
-	public static final BitSet FOLLOW_expr_in_start147 = new BitSet(new long[]{0x0000000000000000L});
-	public static final BitSet FOLLOW_EOF_in_start149 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_term_in_expr171 = new BitSet(new long[]{0x0000000000000282L});
-	public static final BitSet FOLLOW_PLUS_in_expr179 = new BitSet(new long[]{0x0000000000000160L});
-	public static final BitSet FOLLOW_term_in_expr183 = new BitSet(new long[]{0x0000000000000282L});
-	public static final BitSet FOLLOW_MINUS_in_expr198 = new BitSet(new long[]{0x0000000000000160L});
-	public static final BitSet FOLLOW_term_in_expr202 = new BitSet(new long[]{0x0000000000000282L});
-	public static final BitSet FOLLOW_fact_in_term232 = new BitSet(new long[]{0x0000000000000812L});
-	public static final BitSet FOLLOW_TIMES_in_term241 = new BitSet(new long[]{0x0000000000000160L});
-	public static final BitSet FOLLOW_fact_in_term245 = new BitSet(new long[]{0x0000000000000812L});
-	public static final BitSet FOLLOW_DIVISION_in_term260 = new BitSet(new long[]{0x0000000000000160L});
-	public static final BitSet FOLLOW_fact_in_term264 = new BitSet(new long[]{0x0000000000000812L});
-	public static final BitSet FOLLOW_LPAR_in_fact290 = new BitSet(new long[]{0x0000000000000160L});
-	public static final BitSet FOLLOW_expr_in_fact294 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_RPAR_in_fact296 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NUM_in_fact305 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_fact314 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_start25 = new BitSet(new long[]{0x0000000000000000L});
+	public static final BitSet FOLLOW_EOF_in_start27 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_term_in_expr49 = new BitSet(new long[]{0x0000000000000282L});
+	public static final BitSet FOLLOW_PLUS_in_expr57 = new BitSet(new long[]{0x0000000000000160L});
+	public static final BitSet FOLLOW_term_in_expr61 = new BitSet(new long[]{0x0000000000000282L});
+	public static final BitSet FOLLOW_MINUS_in_expr76 = new BitSet(new long[]{0x0000000000000160L});
+	public static final BitSet FOLLOW_term_in_expr80 = new BitSet(new long[]{0x0000000000000282L});
+	public static final BitSet FOLLOW_fact_in_term110 = new BitSet(new long[]{0x0000000000000812L});
+	public static final BitSet FOLLOW_TIMES_in_term119 = new BitSet(new long[]{0x0000000000000160L});
+	public static final BitSet FOLLOW_fact_in_term123 = new BitSet(new long[]{0x0000000000000812L});
+	public static final BitSet FOLLOW_DIVISION_in_term138 = new BitSet(new long[]{0x0000000000000160L});
+	public static final BitSet FOLLOW_fact_in_term142 = new BitSet(new long[]{0x0000000000000812L});
+	public static final BitSet FOLLOW_LPAR_in_fact168 = new BitSet(new long[]{0x0000000000000160L});
+	public static final BitSet FOLLOW_expr_in_fact172 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_RPAR_in_fact174 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NUM_in_fact183 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_fact192 = new BitSet(new long[]{0x0000000000000002L});
 }

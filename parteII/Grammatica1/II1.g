@@ -6,33 +6,6 @@ grammar II1;
 	//Grammatica 1 es II
 	}
 
-PLUS
-	:	'+';
-	
-MINUS
-	:	'-';
-	
-TIMES	
-	:	'*';
-	
-DIVISION
-	:	'/';
-	
-LPAR
-	:	'(';
-	
-RPAR
-	:	')';
-	
-NUM
-	:	('0'..'9')+;
-	
-ID
-	:	('a'..'z'|'A'..'Z')+;
-	
-WS
-	:	( ' ' | '\t' | '\n' | '\r' ) { $channel = HIDDEN; };
-
 	
 start	
 	:	expr EOF
@@ -63,3 +36,30 @@ fact
 	|	ID
 	|	NUM
 	;
+	
+PLUS
+	:	'+';
+	
+MINUS
+	:	'-';
+	
+TIMES	
+	:	'*';
+	
+DIVISION
+	:	'/';
+	
+LPAR
+	:	'(';
+	
+RPAR
+	:	')';
+	
+NUM
+	:	('0'..'9')+;
+	
+ID
+	:	('a'..'z'|'A'..'Z')+;
+	
+WS
+	:	( ' ' | '\t' | '\n' | '\r' ) { $channel = HIDDEN; };
