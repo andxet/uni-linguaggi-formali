@@ -21,7 +21,6 @@ public class Tag {
 	public static Tag EOF = new Tag(5);
 	public static Tag TIMES = new Tag(6);
 	public static Tag DIVISON = new Tag(7);
-	public static Tag ID = new Tag(8);
 
 	/*public boolean equals(Tag i){
 		return i.tag == tag;
