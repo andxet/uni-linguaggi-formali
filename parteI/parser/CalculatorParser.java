@@ -4,10 +4,10 @@ import lexer.*;
 
 public class CalculatorParser {
 	
-	private CalculatorLexer lex;
+	private Lexer lex;
 	private Token look;
 	
-	public CalculatorParser(CalculatorLexer l){
+	public CalculatorParser(Lexer l){
 		lex = l;
 		move();
 	}
