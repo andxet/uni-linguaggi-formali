@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="P">
+    <property name="main.src.dir"    value="."/>
+    <property name="grammar.src.dir" value="."/>
+    <property name="grammar.file"    value="${grammar.src.dir}/III1.g"/>
+    <property name="build.dir"       value="build"/>
+    <property name="classes.dir"     value="parser/"/>
+    <property name="main.build.dir"  value="out/"/>
+
+    <path id="classpath">
+        <pathelement location="${main.src.dir}"/>
+        <pathelement location="${main.build.dir}"/>
+
+        <fileset dir="../">
+                <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="compile" description="Compiles all source files.">
+        <javac srcdir="${classes.dir}" destdir="${main.build.dir}" includeantruntime="false">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+
+    <target name="generate" description="Generates the lexer and parser from the .g grammar file.">
+        <echo>Generating the lexer and parser...</echo>
+        <java classname="org.antlr.Tool" fork="true" failonerror="true">
+            <arg value="-fo"/>
+        	<!-- <arg value="${main.src.dir}/${parser.package}"/> -->
+        	<arg value="${classes.dir}"/>
+        	<arg value="${grammar.file}"/>
+            <classpath refid="classpath"/>
+        </java>
+
+        <!-- 
+            compile the generated parser and lexer source file to see
+            if there's no illegal code inside these source files
+        -->
+        <antcall target="compile"/>
+    </target>
+
+    <!-- other targets -->
+
+</project>
