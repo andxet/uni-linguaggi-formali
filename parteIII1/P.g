@@ -1,4 +1,4 @@
-grammar III1;
+grammar P;
 
 @header {
   //Andrea Peretti, mat. 718024
@@ -7,7 +7,7 @@ grammar III1;
   }
   
 prog
-  : ( decl ';' )* stmt EOF {System.out.println("OK");}
+  : ( decl ';' )* stmt EOF {System.out.println("Syntax\t[OK]");}
   ;
   
 decl
