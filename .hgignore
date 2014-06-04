@@ -12,7 +12,10 @@ gen/
 *.jar
 
 output/
+out/
 .tokens
+
+Out.j
 
 PParser.java
 PLexer.java
