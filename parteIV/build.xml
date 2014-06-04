@@ -47,13 +47,15 @@
 	</target>
 	
 	<target name="parse" description="Compile the file ${file.prova} to Out.j.">
-			<echo>Compiling ${file.prova}...</echo>
-	    	<mkdir dir="${main.build.dir}" />
-			<java classname="pcc" fork="true" failonerror="true">
-				<arg value="${file.prova}"/>
-				<classpath refid="classpath"/>
-			</java>
-		</target>
+		<echo>Compiling ${file.prova}...</echo>
+	    <mkdir dir="${main.build.dir}" />
+		<java classname="pcc" fork="true" failonerror="true">
+			<arg value="${file.prova}"/>
+			<classpath refid="classpath"/>
+		</java>
+		<antcall target="jasmin"/>
+		<antcall target="run_jasmin"/>
+	</target>
 
 	<target name="jasmin" description="Compile Out.j with jasmin">
     	<mkdir dir="${main.build.dir}" />
@@ -98,6 +100,11 @@
     </target>
 	
 	<target name="clean" description="Delete all generated files, PParser and PLexer and P.tokens included.">
+		<delete file="parser/PParser.java"/>
+		<delete file="parser/P.tokens"/>
+		<delete file="parser/PLexer.java"/>
+		<delete dir="out"/>
+		<delete file="Out.j"/>
 	</target>
 
 </project>

@@ -1,13 +1,14 @@
 Per avviare il compilatore, digitare "./run file.p" dalla cartella "ParteIV". Si creerà un file di nome Out.j contenente il bytecode.
 Utilizzando ant:
-generate	- Genera il parser ed il lexer dalla grammatica e compila tutti i file del compilatore
-parse		- compila il file .p specificato nel file ant nella proprietà "file.prova"
+generate	- Genera il parser ed il lexer dalla grammatica e richiama il target compile.
+compile		- compila tutti i file del compilatore.
+parse		- compila il file .p specificato nel file ant nella proprietà "file.prova" e richiama i target jasmin e run_jasmin
 jasmin		- compila il file Out.j generato da parse
 run_jasmin	- esegue il programma generato con jasmin
 
 Per poter eseguire il codice del file .p è necessario eseguire i target nell'ordine specificato.
 --
-ant generate parse jasmin run_jasmin
+ant generate parse
 --
 
 Se si vuole specificare il nome del file .j da compilare utilizzare i comandi:

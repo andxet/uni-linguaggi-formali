@@ -240,7 +240,8 @@ stmt
   	                                  code.emit(OpCode.gotoo, lnext);
   	                                  code.emitLabel(lfalse);
   	                                }
-  	            ('else' stmt)?      {
+  	             (options{greedy=true;}: 'else' stmt)?//Attiva il comportamento greedy, ossia l'else apparterra' sempre all'if più vicino, e non prima.
+  	                                {
   	                                  code.emitLabel(lnext);
   	                                }
   | 'while'                         { int lbegin = code.newLabel();
