@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="P">
+	
+	<property name="main.src.dir"    value="."/>
+    <property name="grammar.src.dir" value="."/>
+    <property name="grammar.file"    value="${grammar.src.dir}/P.g"/>
+    <property name="build.dir"       value="build"/>
+    <property name="classes.dir"     value="parser/"/>
+    <property name="main.build.dir"  value="out/"/>
+	<property name="jasmin"			 value="../jasmin.jar"/>
+	<property name="file.prova"		 value="provewhile.p"/>
+	
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		  <classpath>
+		    <pathelement location="../ant-contrib-1.0b3.jar"/>
+		  </classpath>
+		</taskdef>
+
+    <path id="classpath">
+        <pathelement location="${main.src.dir}"/>
+        <pathelement location="${main.build.dir}"/>
+
+        <fileset dir="../">
+                <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="compile" description="Compiles all source files.">
+    	<mkdir dir="${main.build.dir}" />
+        <javac srcdir="${classes.dir}" destdir="${main.build.dir}" includeantruntime="false">
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+	
+	<target name="tests" description="Compile only the files to test the compiler's files.">
+		<echo>Compiling only tests class...</echo>
+    	<mkdir dir="${main.build.dir}" />
+		<javac srcdir="${classes.dir}" destdir="${main.build.dir}" includeantruntime="false" excludes="pcc.java,PParser.java,PLexer.java">
+			<classpath refid="classpath" />
+		</javac>
+		<java classname="Tests" fork="true" failonerror="true">
+			<arg value="-fo"/>
+			<arg value="${classes.dir}"/>
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+	
+	<target name="parse" description="Compile the file ${file.prova} to Out.j.">
+			<echo>Compiling ${file.prova}...</echo>
+	    	<mkdir dir="${main.build.dir}" />
+			<java classname="pcc" fork="true" failonerror="true">
+				<arg value="${file.prova}"/>
+				<classpath refid="classpath"/>
+			</java>
+		</target>
+
+	<target name="jasmin" description="Compile Out.j with jasmin">
+    	<mkdir dir="${main.build.dir}" />
+    	<java jar="${jasmin}" fork="true" failonerror="true">
+	        <arg value="Out.j"/>
+	        <arg value="-d"/>
+	        <arg value="${main.build.dir}"/>
+	    </java>
+	</target>
+	
+	<target name="run_jasmin" description="Run Out.class">
+		    <java classname="Out" fork="true" failonerror="true">
+		    	<arg value="-fo"/>
+		    	<arg value="${classes.dir}"/>
+		    	<classpath refid="classpath"/>
+		    </java>
+	</target>
+	
+	<target name="exam" description="Target to use in the exam: it ask what program to compile, compile it and execute.">
+		<input message="name of the .p file (don't forget the extension):" addProperty="pfile"/>
+		<var name="file.prova" unset="true" />
+		<property name="file.prova" value="${pfile}"/>
+		<antcall target="parse"/>
+		<antcall target="jasmin"/>
+		<antcall target="run_jasmin"/>
+	</target>
+		
+	
+    <target name="generate" description="Generates the lexer and parser from the .g grammar file.">
+        <echo>Generating the lexer and parser...</echo>
+        <java classname="org.antlr.Tool" fork="true" failonerror="true">
+            <arg value="-fo"/>
+        	<arg value="${classes.dir}"/>
+        	<arg value="${grammar.file}"/>
+            <classpath refid="classpath"/>
+        </java>
+        <!-- 
+            compile the generated parser and lexer source file to see
+            if there's no illegal code inside these source files
+        -->
+    	<antcall target="compile"/>
+    </target>
+	
+	<target name="clean" description="Delete all generated files, PParser and PLexer and P.tokens included.">
+	</target>
+
+</project>
