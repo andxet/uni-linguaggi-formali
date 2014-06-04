@@ -1,8 +1,0 @@
-{int, int, int, bool} => {o, p, q, primo}
-{1237, 2, true} => {o, p, primo}
-
-?{p < o/2 && primo} => *{
-    {o - (o / p) * p, p + 1} => {q, p}
-    {q != 0} => {primo}
-}
-{primo} => {print}
