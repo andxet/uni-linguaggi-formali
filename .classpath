@@ -6,6 +6,7 @@
 	<classpathentry kind="src" path="parteII/Grammatica 2/output"/>
 	<classpathentry kind="src" path="parteII/Grammatica1/output"/>
 	<classpathentry kind="src" path="parteIII/math/output"/>
+	<classpathentry kind="src" path="parteIV/parser"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry exported="true" kind="lib" path="antlr-3.5-complete.jar"/>
 	<classpathentry kind="output" path="bin"/>
