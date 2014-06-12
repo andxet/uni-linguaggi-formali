@@ -80,8 +80,6 @@
 		<var name="file.prova" unset="true" />
 		<property name="file.prova" value="${pfile}"/>
 		<antcall target="parse"/>
-		<antcall target="jasmin"/>
-		<antcall target="run_jasmin"/>
 	</target>
 		
 	
