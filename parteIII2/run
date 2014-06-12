@@ -1,2 +1,2 @@
 
-java -cp ./out:../antlr-3.5-complete.jar pcc $@
+java -cp ./out:../lib/antlr-3.5-complete.jar pcc $@
