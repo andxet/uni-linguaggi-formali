@@ -8,12 +8,13 @@
     <property name="build.dir"       value="build"/>
     <property name="classes.dir"     value="parser/"/>
     <property name="main.build.dir"  value="out/"/>
-	<property name="jasmin"			 value="../jasmin.jar"/>
+    <property name="lib.dir"	     value="../lib" />
+	<property name="jasmin"			 value="${lib.dir}/jasmin.jar"/>
 	<property name="file.prova"		 value="provewhile.p"/>
 	
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
 		  <classpath>
-		    <pathelement location="../ant-contrib-1.0b3.jar"/>
+		    <pathelement location="${lib.dir}/ant-contrib-1.0b3.jar"/>
 		  </classpath>
 		</taskdef>
 
@@ -21,7 +22,7 @@
         <pathelement location="${main.src.dir}"/>
         <pathelement location="${main.build.dir}"/>
 
-        <fileset dir="../">
+        <fileset dir="${lib.dir}">
                 <include name="*.jar"/>
         </fileset>
     </path>

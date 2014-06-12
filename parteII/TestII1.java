@@ -3,9 +3,9 @@ import org.antlr.runtime.*;
 public class TestII1 {
 	public static void main ( String [] args ) throws Exception {
 		ANTLRInputStream input = new ANTLRInputStream ( System.in );
-		II4Lexer lexer = new II4Lexer (input );
+		II1Lexer lexer = new II1Lexer (input );
 		CommonTokenStream tokens = new CommonTokenStream ( lexer );
-		II4Parser parser = new II4Parser ( tokens );
+		II1Parser parser = new II1Parser ( tokens );
 		parser.start();
 	}
 }
